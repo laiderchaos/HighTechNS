@@ -1,0 +1,14 @@
+{
+  "name": "hightechns",
+  "version": "0.0.5",
+  "description": "My first personal project.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "js/css/html"
+  ],
+  "author": "Uladzislau Liubarskii",
+  "license": "ISC"
+}

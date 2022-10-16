@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HighTechNS</title>
+    <link rel="stylesheet" href="style/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+</head>
+<body>
+<script src="https://kit.fontawesome.com/7561000999.js" crossorigin="anonymous"></script>
+<script src="script/index.js"></script>
+<div class="main">
+    <div class="modal_hider"></div>
+    <header class="header">
+        <a href="index.html" class="img_logo"><img src="img/logo.png" class="img_logo_ico"></a>
+        <div class="menu_topline">
+            <a href="#all" class="menu_topline_button __all">All</a>
+            <a href="#news" class="menu_topline_button __news">News</a>
+            <a class="menu_topline_button __reviews">Reviews</a>
+        </div>
+        <div class="registration">
+            <a class="login">Login</a>
+            <a class="signin">SignIn</a>
+        </div>
+    </header>
+        <div class="forms">
+                <form class="sign_in_window">
+                    <img src="svg_ico/closeb.png" class="close_btn_si">
+                    <h1>Registration</h1>
+                    <div class="form_field">
+                        <input type="text" name="mail" placeholder="E-mail">
+                    </div>
+                    <div class="form_field">
+                        <input type="text" name="nickname" placeholder="Nickname">
+                    </div>
+                    <div class="form_field">
+                        <input type="password" name="password" autocomplete="on" placeholder="Password">
+                    </div>
+                    <div class="form_field">
+                        <input type="password" name="password_repeat" autocomplete="on" placeholder="Password again">
+                    </div>
+                    <div class="label_agree">
+                        <input type="checkbox" name="agree_of_terms">
+                        <h4>Agree</h4>
+                        <a class="term_of_usage-link" href="#">term of usage.</a>
+                    </div>
+                    <button class="registration_button signin_btn">
+                        Get in
+                    </button>
+                </form>
+                <form class="login_window">
+                    <img src="svg_ico/closeb.png" class="close_btn_log">
+                    <h1>Login</h1>
+                    <div class="form_field">
+                        <input type="text" name="mail" placeholder="E-mail">
+                    </div>
+                    <div class="form_field">
+                        <input type="password" name="password" autocomplete="on" placeholder="Password">
+                    </div>
+                    <button class="registration_button login_btn">
+                        To come in
+                    </button>
+                </form>
+        </div>
+    <div class="middle">
+        <!--<div class="lineNews">
+            <div class="basic_block_news">
+                <img src="img/black_img.jpg" class="img_news_ico">
+                <div class="text_block">
+                    <h1 class="typeOfBlock">News</h1>
+                    <a class="page_link" href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto debitis ea expedita in minima nam natus nemo quasi tenetur. Aperiam at distinctio ea error illum optio possimus quidem repudiandae, sed.</a>
+                    <h1 class="article_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusantium ad eaque est fugiat iure, mollitia neque nihil, non nulla quas quod sint sunt veniam vero voluptates voluptatibus? Quisquam, unde!</h1>
+                    <h1 class="author_details">Name: ${this._author} date: ${this._date}</h1>
+                </div>
+            </div>
+            <div class="basic_block_news">
+                <img src="img/black_img.jpg" class="img_news_ico">
+                <div class="text_block">
+                    <h1 class="typeOfBlock">News</h1>
+                    <a class="page_link" href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto debitis ea expedita in minima nam natus nemo quasi tenetur. Aperiam at distinctio ea error illum optio possimus quidem repudiandae, sed.</a>
+                    <h1 class="article_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusantium ad eaque est fugiat iure, mollitia neque nihil, non nulla quas quod sint sunt veniam vero voluptates voluptatibus? Quisquam, unde!</h1>
+                    <h1 class="author_details">Name: ${this._author} date: ${this._date}</h1>
+                </div>
+            </div>
+            <div class="basic_block_news">
+                <img src="img/black_img.jpg" class="img_news_ico">
+                <div class="text_block">
+                    <h1 class="typeOfBlock">News</h1>
+                    <a class="page_link" href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto debitis ea expedita in minima nam natus nemo quasi tenetur. Aperiam at distinctio ea error illum optio possimus quidem repudiandae, sed.</a>
+                    <h1 class="article_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusantium ad eaque est fugiat iure, mollitia neque nihil, non nulla quas quod sint sunt veniam vero voluptates voluptatibus? Quisquam, unde!</h1>
+                    <h1 class="author_details">Name: ${this._author} date: ${this._date}</h1>
+                </div>
+            </div>
+        </div>-->
+        <div class="all_news">
+        </div>
+        <div class="load_more">LOAD MORE</div>
+    </div>
+    <div class="reviews_slider">
+        <img src="svg_ico/back.png" class="prev_slide">
+        <img src="svg_ico/next.png" class="next_slide">
+        <div class="slider_line-wrapper">
+            <div class="offer_slider-inner">
+            </div>
+        </div>
+    </div>
+    <div class="footer"></div>
+</div>
+</body>
+</html>
