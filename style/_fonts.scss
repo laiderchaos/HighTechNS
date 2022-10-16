@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto+Mono&display=swap');
+//font-family: 'Open Sans', sans-serif;
+//font-family: 'Roboto Mono', monospace;
+//font-family: 'Silkscreen', cursive;
+@mixin text_for_article{
+  font-family: 'Roboto Mono', monospace;
+  font-weight: bold;
+}
+@mixin text_for_main_text{
+  font-family: monospace;
+  font-weight: bold;
+}
+@mixin text_for_date{
+  font-family: 'Silkscreen', cursive;
+  color: #595959;
+}
