@@ -1,6 +1,4 @@
 export default class Article {
-    _allItems = document.querySelector('.middle');
-
     constructor(src, gameName, alt, title, article, author, rating, date, type, parentSelector) {
         this._src = src;
         this._gameName = gameName;
@@ -24,11 +22,32 @@ export default class Article {
     }
 
     // Clear all middle area on the page.
-    _clearAll() {
-        let list = this._allItems;
-        for (let i = 0; i < list.children.length; i++) {
-            list.children.item(i).remove();
-        }
-        this._allItems.remove();
+     _clearAll(include) {
+        let all = document.querySelector('.middle').children;
+        let slider = document.querySelector('.reviews_slider');
+
+        let counter = all.length;
+
+         for (let i = 0; i < counter; i++) {
+             if (all[i].className !== include) {
+                 all[i].style.display = 'none';
+             } else {
+                 continue;
+             }
+         }
+
+         slider.style.display = 'none';
+
+         /*for (let i = 0; i < all.length; i++) {
+             if (all[i].className !== `${include}`) {
+                 all.);
+             } else {
+                 continue;
+             }
+         }*/
+    }
+
+    _waitScreen() {
+
     }
 }

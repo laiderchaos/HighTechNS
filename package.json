@@ -10,5 +10,10 @@
     "js/css/html"
   ],
   "author": "Uladzislau Liubarskii",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "json-server": "^0.17.0",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0"
+  }
 }

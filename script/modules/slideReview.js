@@ -78,12 +78,13 @@ export default class SlideReview extends Article {
     }
 
 
-    standCard() {
-        this._getResources('http://localhost:3000/article')
+    standCard(url, typeOfSlide) {
+        this._getResources(url)
             .then(data => {
                 // If in the object contains type 'review', render card in slider.
+                console.log(data)
                 for (let obj of data) {
-                    if (obj.type === 'review') {
+                    if (obj.type === typeOfSlide && typeOfSlide === 'review') {
                         // Destructuring and inserting values.
                         let {img, gameName, alt, rating} = obj;
                         new SlideReview(
@@ -92,7 +93,16 @@ export default class SlideReview extends Article {
                             `${alt}`,
                             `${rating}`,
                             `.offer_slider-inner`
-                        ).#renderCard();
+                        ).#renderCard(typeOfSlide);
+                    } else if (obj.type === typeOfSlide && typeOfSlide === 'news') {
+                        let {img, title, alt} = obj;
+                        new SlideReview(
+                            `${img}`,
+                            `${title}`,
+                            `${alt}`,
+                            '0',
+                            `.offer_slider-inner`
+                        ).#renderCard(typeOfSlide);
                     }
                 }
             })
@@ -101,7 +111,7 @@ export default class SlideReview extends Article {
             })
     }
 
-    #renderCard() {
+    #renderCard(type) {
         const elem = document.createElement('div');
 
 
@@ -113,13 +123,22 @@ export default class SlideReview extends Article {
             this._classes.forEach(className => elem.classList.add(className));
         }
 
-        elem.innerHTML = `
+        if (type === 'review') {
+            elem.innerHTML = `
                 <a class="container" href="#">
                     <img src=${this._src} class="image_slide" alt=${this._alt}>
                     <h1 class="title">${this._gameName}</h1>
                     <h1 class="rating">${this._rating}</h1>
                 </a>
             `;
+        } else if (type === 'news') {
+            elem.innerHTML = `
+                <a class="container" href="#">
+                    <img src=${this._src} class="image_slide" alt=${this._alt}>
+                    <h1 class="title">${this._gameName}</h1>
+                </a>
+            `;
+        }
 
         this._parent.append(elem);
     };

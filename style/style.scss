@@ -224,11 +224,11 @@ body {
       .lineNews {
         max-width: 1150px;
         .basic_block_news {
-          margin: 20px;
+          margin: 40px;
           display: flex;
           justify-content: center;
           .img_news_ico{
-            height: 250px;
+            width: 350px;
             justify-content: center;
             vertical-align: center;
           }
@@ -377,7 +377,7 @@ body {
       }
     }
     .reviews_slider{
-      width: 100%;
+      width: 1800px;
       overflow: hidden;
       display: flex;
       align-items: center;
@@ -385,17 +385,13 @@ body {
       background-color: $main-text;
       position: relative;
       .prev_slide{
-        position: absolute;
         width: 100px;
       }
       .next_slide{
-        position: absolute;
-        order: 1;
-        right: 0;
         width: 100px;
       }
       .slider_line-wrapper{
-        width: 100%;
+        width: 1600px;
         background-color: $main-text;
         margin: 20px auto;
         .offer_slider-inner{

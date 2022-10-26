@@ -8,7 +8,7 @@
 </head>
 <body>
 <script src="https://kit.fontawesome.com/7561000999.js" crossorigin="anonymous"></script>
-<script src="script/index.js"></script>
+<script src="dist/bundle.js"></script>
 <div class="main">
     <div class="modal_hider"></div>
     <header class="header">
@@ -16,7 +16,7 @@
         <div class="menu_topline">
             <a href="#all" class="menu_topline_button __all">All</a>
             <a href="#news" class="menu_topline_button __news">News</a>
-            <a class="menu_topline_button __reviews">Reviews</a>
+            <a href="#reviews" class="menu_topline_button __reviews">Reviews</a>
         </div>
         <div class="registration">
             <a class="login">Login</a>
@@ -63,46 +63,19 @@
                 </form>
         </div>
     <div class="middle">
-        <!--<div class="lineNews">
-            <div class="basic_block_news">
-                <img src="img/black_img.jpg" class="img_news_ico">
-                <div class="text_block">
-                    <h1 class="typeOfBlock">News</h1>
-                    <a class="page_link" href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto debitis ea expedita in minima nam natus nemo quasi tenetur. Aperiam at distinctio ea error illum optio possimus quidem repudiandae, sed.</a>
-                    <h1 class="article_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusantium ad eaque est fugiat iure, mollitia neque nihil, non nulla quas quod sint sunt veniam vero voluptates voluptatibus? Quisquam, unde!</h1>
-                    <h1 class="author_details">Name: ${this._author} date: ${this._date}</h1>
-                </div>
-            </div>
-            <div class="basic_block_news">
-                <img src="img/black_img.jpg" class="img_news_ico">
-                <div class="text_block">
-                    <h1 class="typeOfBlock">News</h1>
-                    <a class="page_link" href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto debitis ea expedita in minima nam natus nemo quasi tenetur. Aperiam at distinctio ea error illum optio possimus quidem repudiandae, sed.</a>
-                    <h1 class="article_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusantium ad eaque est fugiat iure, mollitia neque nihil, non nulla quas quod sint sunt veniam vero voluptates voluptatibus? Quisquam, unde!</h1>
-                    <h1 class="author_details">Name: ${this._author} date: ${this._date}</h1>
-                </div>
-            </div>
-            <div class="basic_block_news">
-                <img src="img/black_img.jpg" class="img_news_ico">
-                <div class="text_block">
-                    <h1 class="typeOfBlock">News</h1>
-                    <a class="page_link" href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto debitis ea expedita in minima nam natus nemo quasi tenetur. Aperiam at distinctio ea error illum optio possimus quidem repudiandae, sed.</a>
-                    <h1 class="article_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusantium ad eaque est fugiat iure, mollitia neque nihil, non nulla quas quod sint sunt veniam vero voluptates voluptatibus? Quisquam, unde!</h1>
-                    <h1 class="author_details">Name: ${this._author} date: ${this._date}</h1>
-                </div>
-            </div>
-        </div>-->
+        <div class="lineNews">
+        </div>
         <div class="all_news">
         </div>
         <div class="load_more">LOAD MORE</div>
     </div>
     <div class="reviews_slider">
         <img src="svg_ico/back.png" class="prev_slide">
-        <img src="svg_ico/next.png" class="next_slide">
         <div class="slider_line-wrapper">
             <div class="offer_slider-inner">
             </div>
         </div>
+        <img src="svg_ico/next.png" class="next_slide">
     </div>
     <div class="footer"></div>
 </div>

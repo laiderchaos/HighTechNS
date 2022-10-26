@@ -216,11 +216,11 @@ body {
       body .main .middle .lineNews {
         max-width: 1150px; }
         body .main .middle .lineNews .basic_block_news {
-          margin: 20px;
+          margin: 40px;
           display: flex;
           justify-content: center; }
           body .main .middle .lineNews .basic_block_news .img_news_ico {
-            height: 250px;
+            width: 350px;
             justify-content: center;
             vertical-align: center; }
           body .main .middle .lineNews .basic_block_news .text_block {
@@ -359,7 +359,7 @@ body {
         background-color: #5564ef;
         cursor: pointer; }
     body .main .reviews_slider {
-      width: 100%;
+      width: 1800px;
       overflow: hidden;
       display: flex;
       align-items: center;
@@ -367,15 +367,11 @@ body {
       background-color: #000;
       position: relative; }
       body .main .reviews_slider .prev_slide {
-        position: absolute;
         width: 100px; }
       body .main .reviews_slider .next_slide {
-        position: absolute;
-        order: 1;
-        right: 0;
         width: 100px; }
       body .main .reviews_slider .slider_line-wrapper {
-        width: 100%;
+        width: 1600px;
         background-color: #000;
         margin: 20px auto; }
         body .main .reviews_slider .slider_line-wrapper .offer_slider-inner {
