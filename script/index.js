@@ -21,5 +21,7 @@ window.addEventListener('DOMContentLoaded', () => {
     modal('.login_window', '.login', '.close_btn_log');
     modal('.sign_in_window', '.signin', '.close_btn_si');
 
-    new ListOfNews('all', 2, 'http://localhost:3000/article', '.__news').renderByType();
+    new ListOfNews('news', 5, 'http://localhost:3000/article', '.__news').renderByType();
+    new ListOfNews('all', 5, 'http://localhost:3000/article', '.__all').renderByType();
+    new ListOfNews('review', 5, 'http://localhost:3000/article', '.__reviews').renderByType();
 });

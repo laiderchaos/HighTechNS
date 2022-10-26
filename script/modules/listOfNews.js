@@ -12,7 +12,7 @@ class ListOfNewsIn extends Article {
         this._parent = document.querySelector(parentSelector);
     }
 
-    static #limitationOfText(numberOfSymbols, string) {
+    #limitationOfText(numberOfSymbols, string) {
         let stringArr = string.split(' ');
         let arr = [];
         let str = 'sad';
@@ -27,7 +27,7 @@ class ListOfNewsIn extends Article {
         return str + '...';
     }
 
-    renderList() {
+    _renderList() {
         let div = document.createElement('div');
 
         div.innerHTML = `
@@ -46,9 +46,17 @@ class ListOfNewsIn extends Article {
     }
 }
 
+
+
 export default class ListOfNews extends ListOfNewsIn {
     #count = 0;
-
+    /**
+     * @param {string} typeOfNews The type of article to add.
+     * @param {number} newsAmount The number of news items to add the page.
+     * @param {string} urlDB URL of available database.
+     * @param {string} button A button that, when clicked, opens a page with the desired content.
+     * @return Create the required number of blocks{newsAmoun} with news{urlDB} by clicking the button{button}.
+     * */
     constructor(typeOfNews, newsAmount, urlDB, button) {
         super();
         this._typeOfNews = typeOfNews;
@@ -56,11 +64,10 @@ export default class ListOfNews extends ListOfNewsIn {
         this._urlDB = urlDB;
         this._button = document.querySelector(button);
     }
-
      renderByType() {
         this._button.addEventListener('click', () => {
-            this._clearAll('lineNews');
-            this._getResources(this._urlDB)
+            this._clearAll('.lineNews');
+            /*this._getResources(this._urlDB)
                 .then(data => {
                     if (this._typeOfNews === 'all') {
                         for (let j = 0; j < this._newsAmount; j++) {
@@ -74,9 +81,9 @@ export default class ListOfNews extends ListOfNewsIn {
                                 `${author}`,
                                 `${date}`,
                                 `${type.toUpperCase()}`,
-                                '.lineNews').renderList();
+                                '.lineNews')._renderList();
                         }
-                    } else {
+                    } else if (this._typeOfNews !== 'all') {
                         for (let i = 0; i < this._newsAmount; i++) {
                             if (data[i].type === this._typeOfNews && this._newsAmount >= this.#count) {
                                 this.#count++;
@@ -89,13 +96,13 @@ export default class ListOfNews extends ListOfNewsIn {
                                     `${author}`,
                                     `${date}`,
                                     `${type.toUpperCase()}`,
-                                    '.lineNews').renderList();
+                                    '.lineNews')._renderList();
                             } else {
                                 this._newsAmount++;
                             }
                         }
                     }
-                })
+                })*/
         });
     }
 }

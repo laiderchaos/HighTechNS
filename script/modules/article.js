@@ -22,8 +22,8 @@ export default class Article {
     }
 
     // Clear all middle area on the page.
-     _clearAll(include) {
-        let all = document.querySelector('.middle').children;
+     _clearAll(excluding) {
+        /*let all = document.querySelector('.middle').children;
         let slider = document.querySelector('.reviews_slider');
 
         let counter = all.length;
@@ -36,15 +36,13 @@ export default class Article {
              }
          }
 
-         slider.style.display = 'none';
+         slider.style.display = 'none';*/
+         let all = document.querySelector('.middle');
+         let but = document.querySelector('.__all');
 
-         /*for (let i = 0; i < all.length; i++) {
-             if (all[i].className !== `${include}`) {
-                 all.);
-             } else {
-                 continue;
-             }
-         }*/
+         but.addEventListener('click', () => {
+             all.removeChild();
+         })
     }
 
     _waitScreen() {
