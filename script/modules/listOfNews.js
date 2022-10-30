@@ -66,7 +66,6 @@ export default class ListOfNews extends ListOfNewsIn {
     }
      renderByType() {
         this._button.addEventListener('click', () => {
-            this._clearAll('.lineNews');
             /*this._getResources(this._urlDB)
                 .then(data => {
                     if (this._typeOfNews === 'all') {

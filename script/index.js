@@ -7,16 +7,12 @@ import BlockNews from "./modules/blockNews";
 import ListOfNews from "./modules/listOfNews";
 
 window.addEventListener('DOMContentLoaded', () => {
-
-    let a = document.querySelector('.__all');
-    a.addEventListener('click', () => {
-        new Article()._clearAll();
-    });
+    new Article()._clearAll('.__all', '.middle', '.lineNews', true);
     new BlockNews().standTable();
 
     const slider = new SlideReview();
     slider.standCard('http://localhost:3000/article', 'review');
-    slider.setSliderSettings(360, 20, 4);
+    slider.setSliderSettings(250, 20, 2);
 
     modal('.login_window', '.login', '.close_btn_log');
     modal('.sign_in_window', '.signin', '.close_btn_si');

@@ -22,26 +22,22 @@ export default class Article {
     }
 
     // Clear all middle area on the page.
-     _clearAll(excluding) {
-        /*let all = document.querySelector('.middle').children;
-        let slider = document.querySelector('.reviews_slider');
+     _clearAll(button, destroyingChild, excluding, withSlider) {
 
-        let counter = all.length;
-
-         for (let i = 0; i < counter; i++) {
-             if (all[i].className !== include) {
-                 all[i].style.display = 'none';
-             } else {
-                 continue;
-             }
-         }
-
-         slider.style.display = 'none';*/
-         let all = document.querySelector('.middle');
-         let but = document.querySelector('.__all');
+         let mid = document.querySelector(`${destroyingChild}`).children;
+         let but = document.querySelector(`${button}`);
+         let slider = document.querySelector('.reviews_slider');
 
          but.addEventListener('click', () => {
-             all.removeChild();
+             for (let i = 0; i < mid.length; i++) {
+                 if (excluding !== mid[i].className) {
+                     mid[i].remove()
+                 }
+             }
+             if (withSlider === true) {
+                 slider.remove();
+             }
+
          })
     }
 
